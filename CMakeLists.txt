@@ -2,11 +2,17 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 
 PROJECT(phpcpp)
 
+set(CMAKE_CXX_STANDARD 14)
+
 # Use CMake File with following options
 # PHPCPP_COMPILE_TS     Set flag if PHP was compiled with thread safe
 # PHPCPP_MSVCRT_STATIC  Set flag if you want to compile the MSVC runtime as a static library
 # PHPCPP_ARCH           Set to "x86_64" if architecture and PHP was compiled under x64 or "x86" for 32 bit
 # PHPCPP_PHP_PATH       The path to PHP sources
+
+set(PHPCPP_COMPILE_TS true)
+set(PHPCPP_ARCH "x86_64")
+set(PHPCPP_PHP_PATH "/usr/local/include/php")
 
 LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR})
 
